@@ -4,3 +4,62 @@
     margin: 0;
     padding: 0;
 }
+
+h1 {
+    color: white;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 900px;
+    height: 900px;
+    background-color: black;
+}
+
+.content {
+    display: grid;
+    grid-template: 1fr / repeat(2, 1fr);
+    gap: 20px;
+    grid-template-areas: "col01 col02";
+}
+
+.team {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    grid-area: col01;
+    height: 900px;
+    width: 100%;
+}
+
+.team:nth-child(2) {
+    grid-area: col02;
+}
+
+
+.team--score {
+    background-color: white;
+    padding: 80px;
+}
+
+.team--score>h1 {
+    color: black !important;
+}
+
+.adding--score>button {
+    padding: 20px;
+}
