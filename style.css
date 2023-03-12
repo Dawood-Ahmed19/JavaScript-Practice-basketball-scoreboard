@@ -63,3 +63,8 @@ section {
 .adding--score>button {
     padding: 20px;
 }
+
+.reset--button>button {
+    padding: 15px 60px;
+    font-size: 20px;
+}
