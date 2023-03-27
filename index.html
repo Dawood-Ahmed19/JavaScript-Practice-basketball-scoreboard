@@ -6,61 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Basket Ball</title>
+    <title>Practise</title>
 </head>
 
 <body>
 
     <section>
-        <div class="container">
-            <div class="content">
-
-                <div class="team">
-                    <div class="team--name">
-                        <h1>Los Angeles</h1>
-                    </div>
-                    <div class="team--score">
-                        <h1 id="count--team_1">0</h1>
-                    </div>
-
-                    <div class="adding--score">
-                        <button onclick="increment1()" type="button">+1</button>
-                        <button onclick="increment2()" type="button">+2</button>
-                        <button onclick="increment3()" type="button">+3</button>
-                    </div>
-                    
-                    <div class="reset--button">
-                        <button onclick="reset()" type="button">Reset</button>
-                    </div>
-
-                </div>
-
-                <div class="team">
-
-                    <div class="team--name">
-                        <h1>Golden State</h1>
-                    </div>
-                    <div class="team--score">
-                        <h1 id="count--team_2">0</h1>
-                    </div>
-                    <div class="adding--score">
-                        <button onclick="increment01()" type="button">+1</button>
-                        <button onclick="increment02()" type="button">+2</button>
-                        <button onclick="increment03()" type="button">+3</button>
-                    </div>
-
-                    <div class="reset--button">
-                        <button onclick="reset02()" type="button">Reset</button>
-                    </div>
-
-                </div>
-
-            </div>
+        <div class="container" id="container">
+            <button id="btn" type="button">Click here</button>
+            <input id="input-el" type="text">
+            <ul id="ul-el"></ul>
+            <p id="para-el"></p>
         </div>
     </section>
 
     <script src="index.js"></script>
-
 </body>
 
 </html>

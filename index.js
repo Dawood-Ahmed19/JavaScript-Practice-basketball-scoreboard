@@ -1,44 +1,27 @@
-let count01 = document.getElementById("count--team_1");
-let count02 = document.getElementById("count--team_2");
+let myLeads = [];
+const inputEl = document.getElementById("input-el");
+const myBtn = document.getElementById("btn");
+const ulEl = document.getElementById("ul-el");
+let linksFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
-let count = 0;
-
-increment1 = () => {
-    count += 1;
-    count01.innerHTML = count;
+if (linksFromLocalStorage) {
+    myLeads = linksFromLocalStorage
+    renderLead()
 }
 
-increment2 = () => {
-    count += 2;
-    count01.innerText = count;
+myBtn.addEventListener("click", function () {
+    myLeads.push(inputEl.value);
+    renderLead();
+    inputEl.value = "";
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+})
+
+function renderLead() {
+
+    let listItems = ""
+    for (let i = 0; i < myLeads.length; i++) {
+        listItems += `<li><a target='_blank' href='${myLeads[i]}'> ${myLeads[i]}</a></li>`
+    }
+    ulEl.innerHTML = listItems
 }
 
-increment3 = () => {
-    count += 3;
-    count01.innerText = count
-}
-
-increment01 = () => {
-    count += 1;
-    count02.innerHTML = count;
-}
-
-increment02 = () => {
-    count += 2;
-    count02.innerHTML = count;
-}
-
-increment03 = () => {
-    count += 3;
-    count02.innerHTML = count;
-}
-
-reset = () => {
-    count = 0;
-    count01.innerHTML = count;
-}
-
-reset02 = () => {
-    count = 0;
-    count02.innerHTML = count;
-}
