@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
 *::after,
 *::before,
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: 'Cardo', sans-serif;
+    min-width: 500px;
+    min-height: 500px;
 }
 
 section {
@@ -13,12 +21,41 @@ section {
     width: 100%;
 }
 
+h1 {
+    color: white;
+    font-weight: 700;
+}
+
 .container {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     display: flex;
     flex-direction: column;
+    background-color: black;
     gap: 20px;
     justify-content: center;
     align-items: center;
+}
+
+ul {
+    list-style-type: lower-roman;
+}
+
+li {
+    color: white;
+    font-size: 20px;
+}
+
+input {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+button {
+    padding: 5px 20px;
+    background-color: white;
+    border: none;
+    font-weight: 700;
 }
